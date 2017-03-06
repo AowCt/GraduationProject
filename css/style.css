@@ -1,0 +1,42 @@
+
+body, h1, h2, h3, h4, h5, h6, p, ul, li, input, dl,dt,dd,div,ol,form{
+	padding: 0;
+	margin: 0;
+}
+body{
+	color: #666;
+    background: #FFF;
+    font-family: "Microsoft YaHei UI", "Microsoft YaHei UI Light", "微软雅黑", "宋体", Helvetica-Black-SemiBold, Tahoma, Arial, sans-serif;
+    font-size: 12px;
+    line-height: 24px;
+}
+img{
+	border: 0;
+	display: block;
+}
+a,li{
+	cursor: pointer;
+	list-style: none;
+	text-decoration: none;
+}
+input{
+	font-family: inherit;
+	font-size: inherit;
+	font-style: inherit;
+	font-weight: inherit;
+}
+*::after, *::before {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+.f1{
+	margin: 0 auto;
+	width: 1200px;
+}
+label {
+    cursor: default;
+}
+.wrap_box{
+	width: 1200px;
+	margin: 0 auto;
+}

@@ -4,13 +4,210 @@
 		<meta charset="UTF-8">
 		<title>表佰-手表商城</title>
 		<link href="img/icon.ico" type="image/x-icon" rel="icon">
-		<link rel="stylesheet" href="css/head.css" />
-		<link rel="stylesheet" href="css/style.css" />
+		<link rel="stylesheet" type="text/css" href="css/head.css"/>
+		<link rel="stylesheet" type="text/css" href="css/index.css"/>
+		<script type="text/javascript" src="js/jquery-1.8.3.min.js"></script>
+		
+		<script type="text/javascript" src="js/index.js"></script>
+		<script type="text/javascript">
+			$(function(){
+				
+			})
+		</script>
+		<script type="text/javascript" src="js/head.js"></script>
 	</head>
 	<body>
-	
-		<div class="head wrap_box">
-			
+		<!-- 头部  -->
+		<div class="head"></div>
+		<!--  通片轮播  -->
+		<div class="banner">
+			<ul class="slides" id="slides">
+	            <li>
+	                <a href="javascript:;">
+						<img src="img/styleImg/148775219769192.jpg" alt=""/>
+					</a>
+	            </li>
+	            <li>
+	                <a href="javascript:;">
+						<img src="img/styleImg/148783844925440.jpg" alt="" />
+					</a>
+	            </li>
+	            <li>
+	                <a href="javascript:;">
+						<img src="img/styleImg/148824972441805.jpg" alt="" />
+					</a>
+	            </li>
+	            <li>
+	                <a href="javascript:;">
+						<img src="img/styleImg/148842519331009.jpg" alt="" />
+					</a>
+	            </li>
+	            <li>
+	                <a href="javascript:;">
+	                    <img src="img/styleImg/148775219769192.jpg">
+	                </a>
+	            </li>        
+			</ul>
+	        <ul class="flex-direction-nav" id="flex-direction-nav">
+	            <li><a class="flex-prev" href="javascript:;"></a></li>
+	            <li><a class="flex-next" href="javascript:;"></a></li>
+	        </ul>
+	        <ol id="bannerCtrl" class="flex-control-nav flex-control-paging">
+            	<li class="active"><a></a></li>
+            	<li class=""><a></a></li>
+            	<li class=""><a></a></li>
+            	<li class=""><a></a></li>
+            	<li class=""><a></a></li>      
+	        </ol>
+		</div>
+		
+		<!--  整点抢购  -->
+		<div class="time_box">
+			<div class="pub_width">
+				<div class="time_word">
+					<p>
+						<span>整点抢购</span>
+						<span style="color: #999;font-size: 12px;margin-left: 22px;">品牌汇集，一站购齐</span>
+					</p>
+					<div><a>明日抢购 &gt;&gt;</a></div>
+				</div>
+				<div class="time_pg">
+					<div class="sun"><img src="img/styleImg/sun.png" alt="" height="100%"/></div>
+					<div class="timer_group">
+						<ul>
+							<!--<li>
+								<div class="time_tip">
+									<span style="#ededed;">8:00开始</span>
+								</div>
+								<div class="clicktime"></div>
+								<div>
+									<div class="time_line"></div>
+									<div class="time_point">
+										<p class="point"></p>
+									</div>
+									<div class="time_line"></div>
+								</div>
+								<div class="clear" style="clear: both;"></div>
+								<div class="time_list time_past">8:00</div>
+								<div class="time_font"></div>
+							</li>
+							<li>
+								<div class="time_tip">
+									<span style="#ededed;">10:00开始</span>
+								</div>
+								<div class="clicktime"></div>
+								<div>
+									<div class="time_line"></div>
+									<div class="time_point">
+										<p class="point"></p>
+									</div>
+									<div class="time_line"></div>
+								</div>
+								<div class="clear" style="clear: both;"></div>
+								<div class="time_list time_past">10:00</div>
+								<div class="time_font"></div>
+							</li>
+							<li>
+								<div class="time_tip">
+									<span style="#ededed;">12:00开始</span>
+								</div>
+								<div class="clicktime"></div>
+								<div>
+									<div class="time_line"></div>
+									<div class="time_point">
+										<p class="point"></p>
+									</div>
+									<div class="time_line"></div>
+								</div>
+								<div class="clear" style="clear: both;"></div>
+								<div class="time_list time_past">12:00</div>
+								<div class="time_font"></div>
+							</li>
+							<li>
+								<div class="time_tip">
+									<span style="#ededed;">14:00开始</span>
+								</div>
+								<div class="clicktime"></div>
+								<div>
+									<div class="time_line"></div>
+									<div class="time_point">
+										<p class="point"></p>
+									</div>
+									<div class="time_line"></div>
+								</div>
+								<div class="clear" style="clear: both;"></div>
+								<div class="time_list time_past">14:00</div>
+								<div class="time_font"></div>
+							</li>
+							<li>
+								<div class="time_tip">
+									<span style="#ededed;">16:00开始</span>
+								</div>
+								<div class="clicktime"></div>
+								<div>
+									<div class="time_line"></div>
+									<div class="time_point">
+										<p class="point"></p>
+									</div>
+									<div class="time_line"></div>
+								</div>
+								<div class="clear" style="clear: both;"></div>
+								<div class="time_list time_past">16:00</div>
+								<div class="time_font"></div>
+							</li>
+							<li>
+								<div class="time_tip">
+									<span style="#ededed;">18:00开始</span>
+								</div>
+								<div class="clicktime"></div>
+								<div>
+									<div class="time_line"></div>
+									<div class="time_point">
+										<p class="point"></p>
+									</div>
+									<div class="time_line"></div>
+								</div>
+								<div class="clear" style="clear: both;"></div>
+								<div class="time_list time_past">18:00</div>
+								<div class="time_font"></div>
+							</li>
+							<li>
+								<div class="time_tip">
+									<span style="#ededed;">20:00开始</span>
+								</div>
+								<div class="clicktime"></div>
+								<div>
+									<div class="time_line"></div>
+									<div class="time_point">
+										<p class="point"></p>
+									</div>
+									<div class="time_line"></div>
+								</div>
+								<div class="clear" style="clear: both;"></div>
+								<div class="time_list time_past">20:00</div>
+								<div class="time_font"></div>
+							</li>
+							<li>
+								<div class="time_tip">
+									<span style="#ededed;">22:00开始</span>
+								</div>
+								<div class="clicktime"></div>
+								<div>
+									<div class="time_line"></div>
+									<div class="time_point">
+										<p class="point"></p>
+									</div>
+									<div class="time_line"></div>
+								</div>
+								<div class="clear" style="clear: both;"></div>
+								<div class="time_list time_past">22:00</div>
+								<div class="time_font"></div>
+							</li>-->
+						</ul>
+					</div>
+					<div class="sun" style="right: 0;"><img src="img/styleImg/moon.png" alt="" height="100%"/></div>
+				</div>
+			</div>
 		</div>
 	
 	</body>

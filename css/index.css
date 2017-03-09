@@ -63,13 +63,13 @@ label {
 .imgBig {
   position: relative;
   -moz-transform: scale(1.03, 1.03);
-  -webkit-transform: scale(2, 2);
+  -webkit-transform: scale(1.03, 1.03);
   transform: scale(1.03, 1.03); }
 
-.CirHover, .circle ul li:hover {
+.CirHover {
   width: 10px;
   height: 10px;
-  margin: 4px 5px 0 6px;
+  margin: 4px 5px 0 5px;
   border: 2px solid #fff;
   background-color: none; }
 
@@ -500,8 +500,7 @@ label {
       margin: 0 auto; }
       .zoonBtTop .zoonBtRight .zoonBigImg p.p1 img {
         width: 240px;
-        height: 240px;
-        -webkit-transition: all 2s; }
+        height: 240px; }
   .zoonBtTop .zoonBtRight .p2 {
     color: #333;
     font-size: 16px; }

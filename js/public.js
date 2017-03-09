@@ -32,7 +32,7 @@
 		},this.speed);
 		//下一张图片
 		$(this.boxId).on("click","span:eq(1)",function(){
-			console.log($(this))
+//			console.log($(this))
 			_self.Next();
 		});
 		//上一张图片
@@ -52,6 +52,9 @@
 				that.Next()
 			},_self.speed);
 		});
+		
+		//小圆点点击事件
+		this.ClickCircle();
 	}
 	
 	MoveImg.prototype.Next = function(){
@@ -60,14 +63,14 @@
     		this.num = 0;
 //	    		$(this.boxId+" ul:eq(0) li").css({"opacity":0});
     	}
-	    
+//	    console.log(this.num)
 		this.Public();
 	}
 	MoveImg.prototype.Prev = function(){
 		this.num--;
     	if(this.num < 0){
     		this.num = $(this.boxId+" ul:eq(0) li").length-1;
-//	    		$(this.boxId+" ul:eq(0) li").css({"opacity":0});
+//	    	$(this.boxId+" ul:eq(0) li").css({"opacity":0});
     	}
 	   this.Public();
 	}
@@ -81,6 +84,21 @@
 		//图片放大缩小
 		$(this.boxId+" ul:eq(0) li").eq(this.num).find("img").css({"transform":"scale(1,1)"});
 		$(this.boxId+" ul:eq(0) li").eq(this.num).siblings().find("img").css({"transform":"scale(1.03,1.03)"});
+	}
+	MoveImg.prototype.ClickCircle = function(){
+		var _self = this;
+		$(this.boxId+" .circle").on("mouseenter","li",function(){
+			_self.num = $(_self.boxId+" .circle li").index(this);
+//			console.log(_self.num)
+			$(this).addClass("CirHover");
+			$(this).siblings().removeClass("CirHover");
+			
+			_self.Public();
+		});
+//		$(this.boxId+" .circle").on("mouseleave","li",function(){
+//			$(this).removeClass("CirHover");
+////			$(this).siblings().removeClass("CirHover");
+//		});
 	}
 //});
 

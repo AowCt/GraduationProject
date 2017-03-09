@@ -4,6 +4,7 @@ $(function(){
 			this.load();
 			this.trans();
 			this.exchange();
+			this.bigImg();
 		},
 		/**
 		 * 添加网页
@@ -63,6 +64,17 @@ $(function(){
 				$(this).find(".hotLeft").animate({"height":"0"},500);
 				$(this).find(".hotRight").animate({"height":"0"},500);
 				
+			});
+		},
+		//图片放大
+		bigImg:function(){
+			
+			$(".p1").on("mouseenter","img",function(){
+				$(this).animate({"width":"103%","height":"103%"},500);
+				
+			});
+			$(".p1").on("mouseleave","img",function(){
+				$(this).animate({"width":"100%","height":"100%"},500);
 			});
 		}
 		

@@ -58,16 +58,16 @@ label {
   display: block; }
 
 .top_nav {
-  background-color: #333;
+  background-color: #666;
   padding: 2px 0;
-  color: #dbdbdb; }
+  color: #EDEDED; }
   .top_nav a {
     color: #1153E0; }
 
 .head .top_nav p a {
   color: #E67D1F; }
   .head .top_nav p a:hover {
-    color: #dbdbdb; }
+    color: #EDEDED; }
 
 .head .top_nav .div_box {
   float: left;
@@ -76,7 +76,7 @@ label {
   position: relative;
   z-index: 10000; }
   .head .top_nav .div_box a {
-    color: #dbdbdb; }
+    color: #EDEDED; }
     .head .top_nav .div_box a span {
       width: 7px;
       height: 6px;
@@ -91,24 +91,26 @@ label {
 .bb_bb {
   position: absolute;
   top: 25px;
-  background-color: #333;
+  background-color: #666;
   z-index: 2;
-  padding: 10px;
-  border-right: 1px solid #333;
-  border-bottom: 1px solid #333;
-  border-left: 1px solid #333;
+  width: 80px;
+  border-right: 1px solid #666;
+  border-bottom: 1px solid #666;
+  border-left: 1px solid #666;
   display: none;
   left: 0px; }
   .bb_bb li {
-    width: 60px;
-    margin: 5px 0px; }
+    width: 80px;
+    padding: 5px 0px; }
+    .bb_bb li:hover {
+      background: #333; }
 
 .sjd_sjd {
   position: absolute;
-  background-color: #333;
+  background-color: #666;
   padding: 10px;
   display: none;
-  border: 1px solid #333;
+  border: 1px solid #666;
   z-index: 0;
   left: -32px;
   top: 24px; }
@@ -125,14 +127,16 @@ label {
   position: absolute;
   right: 0px;
   top: 24px;
-  background-color: #333;
+  background-color: #666;
   z-index: 2;
   width: 110px;
   display: none;
-  border: 1px solid #333; }
+  border: 1px solid #666; }
   .hm_hm li {
-    margin: 5px 0px;
+    padding: 5px 0px;
     text-align: center; }
+    .hm_hm li:hover {
+      background: #333; }
 
 .top_mid {
   padding: 35px 0 18px;

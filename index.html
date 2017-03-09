@@ -10,12 +10,37 @@
 		<script type="text/javascript" src="js/jquery-1.8.3.min.js"></script>
 		
 		<script type="text/javascript" src="js/index.js"></script>
+		<script type="text/javascript" src="js/public.js"></script>
 		<script type="text/javascript">
 			$(function(){
+//				console.log()
+				//轮播图
+				var banner = new MoveImg({
+										"boxId":".banner",
+										"speed":2000
+									});
+				banner.opacityImg();
+				男表专区轮播图
+				var MrZone = new MoveImg({
+										"boxId":".MrZone",
+										"speed":2000
+									});
+				MrZone.opacityImg();
+				//女表专区轮播图
+				var MsZone = new MoveImg({
+										"boxId":".MsZone",
+										"speed":2000
+									});
+				MsZone.opacityImg();
+				//情侣专区轮播图
+				var LovesZone = new MoveImg({
+										"boxId":".LovesZone",
+										"speed":2000
+									});
+				LovesZone.opacityImg();
 				
 			})
 		</script>
-		<script type="text/javascript" src="js/head.js"></script>
 	</head>
 	<body>
 		<!-- 头部  -->
@@ -43,26 +68,32 @@
 						<img src="img/styleImg/148842519331009.jpg" alt="" />
 					</a>
 	            </li>
-	            <li style="background: rgb();">
+	            <li style="background: rgb(4,1,1);">
 	                <a href="javascript:;">
-	                    <img src="img/styleImg/148775219769192.jpg">
+	                    <img src="img/styleImg/148896807011602.jpg" style="padding-left: 177px;">
 	                </a>
-	            </li>        
+	            </li>  
+	            <li style="background: rgb(8,8,12);">
+	                <a href="javascript:;">
+	                    <img src="img/styleImg/148127630137165.png" style="padding-left: 177px;">
+	                </a>
+	            </li>
 			</ul>
 	        <span class="prev"></span>
 	        <span class="next"></span>
-	        <ul id="circle">
-				<li></li>
-				<li></li>
-				<li></li>
-				<li></li>
-				<li></li>
-				<li></li>
-			</ul>
-
+	        <div class="circle">
+	        	<p></p>
+		        <ul>
+					<li></li>
+					<li></li>
+					<li></li>
+					<li></li>
+					<li></li>
+					<li></li>
+				</ul>
+				<p style="background-position: -261px 0;"></p>
+	        </div>
 		</div>
-		
-		
 		
 		<div class="box_mid">
 			<div class="pub_width">

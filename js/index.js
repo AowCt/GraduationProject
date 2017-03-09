@@ -1,5 +1,5 @@
 $(function(){
-	var banner = {
+	var homepage = {
 		init:function(){
 			this.load();
 			this.trans();
@@ -9,6 +9,9 @@ $(function(){
 		 * 添加网页
 		 */
 		load:function(){
+//			$.ajaxsetup ({
+//		        cache: false
+//		    });
 			$(".head").load("head.html");//添加head.html
 			$(".footer").load("footer.html");//添加footer.html
 		},
@@ -63,6 +66,7 @@ $(function(){
 			});
 		}
 		
+		
 	}
-	banner.init();
+	homepage.init();
 })

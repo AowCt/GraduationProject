@@ -1,6 +1,6 @@
 @charset "utf-8";
 @import "base";
-$bgColor: #2738da;
+$bgColor: #b01330;
 $background: #666;
 .dispBlock{
     display: block;
@@ -275,7 +275,7 @@ $background: #666;
             dl{
                     padding: 22px 0 22px 10px;
                     overflow: hidden;
-                    border-bottom: 2px solid #1153E0;
+                    border-bottom: 2px solid #dd1036;
                     background: $bgColor;
                     
                     &.active{

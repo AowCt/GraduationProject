@@ -1,6 +1,6 @@
 @charset "utf-8";
 @import "base";
-$bgColor:#2738da;
+$bgColor:#b01330;
 .regtop{
     padding: 20px 0px;
     background: #f2f2f2;
@@ -32,17 +32,64 @@ $bgColor:#2738da;
     overflow: hidden;
     height: 480px;
     border-bottom: 1px solid #dbdbdb;
+    background: url("../img/styleImg/u=3213564594,2260758653&fm=23&gp=0.png") center center;
     .login_right{
         padding: 46px 0;
-         background: url("../img/styleImg/u=3492394799,1622853643&fm=23&gp=0.png");
+         background: url("../img/styleImg/loginBg.png") no-repeat center center;
         position: relative;
+        //第三方登录
+        .thirdland{
+            width: 300px;
+            position: absolute;
+            left: 275px;
+            top: 70px;
+            p{
+                font-size: 14px;
+                line-height: 20px;
+                color: #000;
+            }
+            ul{
+                    margin-top: 38px;
+                li{
+                    float: left;
+                    width: 64px;
+                    text-align: center;
+                    margin-right: 30px;
+                    i{
+                        display: block;
+                        width: 64px;
+                        height: 64px;
+                        background: url(../img/styleImg/login_icon_re.png) no-repeat;
+                    }
+                    &:nth-child(1) i{
+                        background-position: 0 0;
+                    }
+                    &:nth-child(2) i{
+                        background-position: -64px 0;
+                    }
+                    &:nth-child(3) i{
+                        background-position: -129px 0;
+                    }
+                    span{
+                        display: block;
+                        font-size: 14px;
+                        line-height: 20px;
+                        color: #000;
+                        margin-top: 10px;
+                    }
+                }
+            }
+        }
+        
+        
+        //登录
         .login_login{
-            margin-right: 45px;
+            margin-right: 250px;
             width: 340px;
             height: 390px;
-            background: #ffffff;
+//          background: #ffffff;
         /*  padding: 25px 21px 18px 23px;*/
-            border: 1px solid #dbdbdb;
+//          border: 1px solid #dbdbdb;
             float: right;
             //头文字
             .login_above{
@@ -74,7 +121,7 @@ $bgColor:#2738da;
     line-height: 22px;
     .error_tips {
         margin: 0 22px 0 22px;
-        color: #e21c2a;
+        color: #b01330;
         line-height: 12px;
     /*    display: none;*/
         i {
@@ -95,23 +142,7 @@ $bgColor:#2738da;
     margin: 10px 22px 0 22px;
     position: relative;
     height: 42px;
-    .input_icon{
-        padding: 8px 20px;
-        height: 22px;
-        font-size: 14px;
-        font-weight: 400;
-        display: inline-block;
-        line-height: 1;
-        color: #555;
-        text-align: center;
-        background-color: #f9f9f9;
-        white-space: nowrap;
-        vertical-align: middle;
-        float: left;
-        position: absolute;
-        left: 2px;
-        top: 2px;
-    }
+    
     //input输入框
     .input_size{
         display: block;
@@ -125,6 +156,23 @@ $bgColor:#2738da;
         font-size: 13px;
         color: #666;
     }
+}
+.input_icon{
+    padding: 8px 20px;
+    height: 22px;
+    font-size: 14px;
+    font-weight: 400;
+    display: inline-block;
+    line-height: 1;
+    color: #555;
+    text-align: center;
+    background-color: #f9f9f9;
+    white-space: nowrap;
+    vertical-align: middle;
+    float: left;
+    position: absolute;
+    left: 2px;
+    top: 2px;
 }
 //用户名小图标
 .user_icon{
@@ -152,7 +200,7 @@ $bgColor:#2738da;
         width: 291px;
         height: 34px;
         float: left;
-        background-color: #1CC0E2;
+        background-color: #f55674;
         padding: 3px;
         .Slider {
             width: 52px;

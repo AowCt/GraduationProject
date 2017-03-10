@@ -20,7 +20,8 @@
     border: 2px solid #fff;
     background-color: none;
 }
-$bgColor:#2738da;
+//$bgColor:#2738da;
+$bgColor: #b01330;
 .banner{
    margin: 0px auto 20px;
     position: relative;
@@ -327,6 +328,11 @@ $bgColor:#2738da;
                         background: #ededed;
                         margin: 3px;
                     }
+                }
+                .time_font{
+                    color: #ffb033;
+                    font-size: 16px;
+                    display: none;
                 }
             }
         }

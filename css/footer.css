@@ -56,7 +56,7 @@ label {
 
 .foot_top {
   height: 60px;
-  background: #2738da; }
+  background: #b01330; }
   .foot_top a {
     width: 240px;
     text-align: center;
@@ -105,7 +105,7 @@ label {
       .foot_mid .ft_mid_ul ul li a {
         color: #999; }
         .foot_mid .ft_mid_ul ul li a:hover {
-          color: #2738da; }
+          color: #b01330; }
 
 .foot_root {
   text-align: center;
@@ -125,7 +125,7 @@ label {
         height: 14px;
         line-height: 14px; }
         .foot_root ul li a:hover {
-          color: #2738da; }
+          color: #b01330; }
   .foot_root div a {
     display: inline-block; }
     .foot_root div a img {

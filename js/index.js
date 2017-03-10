@@ -5,6 +5,8 @@ $(function(){
 			this.trans();
 			this.exchange();
 			this.bigImg();
+			this.onTimePg();
+			this.fifth();
 		},
 		/**
 		 * 添加网页
@@ -76,6 +78,130 @@ $(function(){
 			$(".p1").on("mouseleave","img",function(){
 				$(this).animate({"width":"100%","height":"100%"},500);
 			});
+		},
+		//整点抢购
+		onTimePg:function(){
+			/*疯抢倒计时*/
+				
+			var  flag=8;//最大不能超过8
+			//	function time(){
+			setInterval(function (){
+				var now_date=new Date();//获得当前时间
+				var h=now_date.getHours();//当前小时
+		        var index=Math.floor((h-8)/2);//（8:00~22:00）-->0~8,即：0<index<8
+		        if(index>=0&&index<=7){//表示在区域内，即白天
+		        	if(index!=flag){
+		        	change(index);
+		        	flag=index;
+		        	};
+		        }else{//即，时间在22:00~8:00之间
+		        	if(index!=flag&&flag>=0){
+		        		change1();
+		        		flag=index;
+		        	}
+		        	index=index+1;
+		        	return;
+		        }
+		        var next_h=(index+1)*2+8;//表示整点抢购后面的时间
+		        var future_date=new Date();//当前时间
+		        future_date.setHours(next_h,0,0);//设置时分秒：把当前时间下一个整点抢购的小时作为目标小时
+		        /**
+		         * 时间差，进行倒计时
+		         */
+		        var ms=future_date-now_date;//毫秒数
+		        var s=Math.floor(ms/1000);//秒数
+		        
+		        var h=Math.floor(s/3600);//时
+		        var m=Math.floor((s-h*3600)/60);//分
+		        var last_s=s%60;//秒
+		        
+		        var str1="0"+h+":"+(m>9?m:"0"+m)+":"+(last_s>9?last_s:"0"+last_s);
+		        var value=(2*index+8)+":00  疯抢中";
+		        var pre_index=(index-1)*2+8;//
+				$(".timer_group ul li").eq(index).find(".time_point").css("border-color","#ffb033");
+				$(".timer_group ul li").eq(index).find(".time_point").find("p").css("background","#ffb033");
+				$(".timer_group ul li").eq(index).find(".time_tip").css({"opacity":"1","transform":"translate3d(0,0,0)"});
+				$(".timer_group ul li").eq(index).find(".time_tip").find("span").text();
+				$(".timer_group ul li").eq(index).find(".time_list").css("color","#999999");
+				$(".timer_group ul li").eq(index).find(".time_list").text("距结束");
+				$(".timer_group ul li").eq(index).find(".time_font").html(str1);
+				$(".timer_group ul li").eq(index).find(".time_font").css("display","block");
+				$(".timer_group ul li").eq(index).hover(
+					function () {
+						$(this).find(".time_tip").css({"opacity":"1","transform":"translate3d(0,0,0)"});
+					}
+				);
+				$(".timer_group ul li:eq("+index+")").prevAll().find(".time_past").css("color","#ededed");
+				$(".timer_group ul li:eq("+index+")").prevAll().find(".time_tip").css("opacity","0");
+				$(".timer_group ul li:eq("+index+")").prevAll().find(".time_point").css("border-color","#ededed");
+				$(".timer_group ul li:eq("+index+")").prevAll().find(".time_point").find("p").css("background","#ededed");
+				$(".timer_group ul li:eq("+index+")").prevAll().find(".time_past").css("color","#ededed");
+				$(".timer_group ul li:eq("+index+")").prev().find(".time_tip").find("span").text(pre_index+":00 开始");
+				$(".timer_group ul li:eq("+index+")").prev().find(".time_list").text(pre_index+":00");
+				$(".timer_group ul li:eq("+index+")").prev().find(".time_font").css("display","none");
+				$(".timer_group ul li:eq("+index+")").prevAll().hover(
+					function () {
+						$(this).find(".time_tip").css({"opacity":"0","transform":"translate3d(0,0,0)"})
+					}
+				);
+				//
+				$(".timer_group ul li:eq("+index+")").nextAll().find(".time_past").css("color","#000");
+				
+			},1000);
+			function change (index){
+				//找到此li后面所有的li，使其能够滑到固定位置隐藏
+				$(".timer_group ul li:eq("+index+")").nextAll().find(".time_tip").css({"opacity":"0","transform":"translate3d(0,-50%,0)"});
+				//找到此li后面所有的li，，
+				$(".timer_group ul li:eq("+index+")").nextAll().hover(
+				function (){//移动到上面，出现，下滑
+					$(this).find(".time_tip").css({"opacity":"1","transform":"translate3d(0,0,0)"});
+				},
+				function (){////移出，隐藏，回到原来位置
+					$(this).find(".time_tip").css({"opacity":"0","transform":"translate3d(0,-50%,0)"});
+				});
+			};
+			function change1 (){
+				$(".timer_group ul li:eq(7)").find(".time_tip").css({"opacity":"0","transform":"translate3d(0,0,0)"});
+				$(".timer_group ul li:eq(7)").find(".time_point").css("border-color","#ededed");
+				$(".timer_group ul li:eq(7)").find(".time_point").find("p").css("background","#ededed");
+				$(".timer_group ul li:eq(7)").find(".time_list").text("22:00");
+				$(".timer_group ul li:eq(7)").find(".time_tip").find("span").text("22:00 开始");
+				$(".timer_group ul li").eq(7).find(".time_font").css("display","none");
+				$(".timer_group ul li").find(".time_past").css("color","#000");
+				$(".timer_group ul li").hover(
+					function (){
+						$(this).find(".time_tip").css({"opacity":"1","transform":"translate3d(0,0,0)"});
+					},
+					function (){
+						$(this).find(".time_tip").css({"opacity":"0","transform":"translate3d(0,-50%,0)"});
+					}
+				);
+			}
+		},
+		//第五大道(点击，ul移动)
+		fifth:function(){
+			let _widthLi = parseInt($(".fifthAvenue ul li:eq(0)").css("width"))//一个li的宽度
+			let _widthUl = ($(".fifthAvenue ul li").size())*_widthLi;//一个ul的宽度
+			let _left = parseInt($(".fifthAvenue ul").offset().left);
+			let m = 0;
+			
+			$(".fifthAvenue").on('click',".hot_prev",function(){//点击向前
+				m--;
+					if(m==-1){
+						$(".fifthAvenue ul").css({"left":0});
+						m=0;
+					}
+					$(".fifthAvenue ul").animate({"left":(-1)*m*_widthLi+"px"},1000);
+			});
+			$(".fifthAvenue").on('click',".hot_next",function(){//点击向后
+				m++;
+					if(m==$(".fifthAvenue ul li").size()){
+						$(".fifthAvenue ul").css({"left":(-1)*($(".fifthAvenue ul li").size()-1)*_widthLi+"px"});
+						m=$(".fifthAvenue ul li").size()-1;
+					}
+					$(".fifthAvenue ul").animate({"left":(-1)*m*_widthLi+"px"},1000);	
+			});
+			console.log($(".fifthAvenue ul").offset().left);
 		}
 		
 		

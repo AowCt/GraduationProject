@@ -188,7 +188,7 @@ label {
     top: 7px;
     font-size: 12px; }
     .time_word div a {
-      color: #2738da; }
+      color: #b01330; }
 
 /*!
  * 线条变化
@@ -226,7 +226,7 @@ label {
           text-align: center;
           opacity: 0; }
           .fifavBot ul li .hotBrand .exchangeImg p {
-            color: #2738da;
+            color: #b01330;
             font-size: 20px; }
           .fifavBot ul li .hotBrand .exchangeImg div {
             width: 22px;
@@ -344,6 +344,10 @@ label {
             border-radius: 50%;
             background: #ededed;
             margin: 3px; }
+        .time_box .time_pg .timer_group li .time_font {
+          color: #ffb033;
+          font-size: 16px;
+          display: none; }
 
 /*
 .timer_group .time_point_active {
@@ -421,7 +425,7 @@ label {
             padding: 4px 10px;
             text-align: center;
             color: #FFF;
-            background-color: #2738da;
+            background-color: #b01330;
             font-size: 14px; }
             .page_mid ul li .impag .list_round .list_round_btn:hover {
               color: #FFF; }
@@ -447,7 +451,7 @@ label {
         text-align: center; }
         .page_mid ul li .wod p {
           font-size: 14px;
-          color: #2738da;
+          color: #b01330;
           display: block;
           height: 21px;
           line-height: 21px; }
@@ -460,7 +464,7 @@ label {
           line-height: 12px;
           width: 224px; }
           .page_mid ul li .wod a:hover {
-            color: #2738da; }
+            color: #b01330; }
 
 .MrZone {
   padding-bottom: 38px; }
@@ -505,7 +509,7 @@ label {
     color: #333;
     font-size: 16px; }
   .zoonBtTop .zoonBtRight .p3 {
-    color: #2738da;
+    color: #b01330;
     font-size: 12px; }
   .zoonBtTop .zoonBtRight .zoonRightUl {
     float: righ;
@@ -543,10 +547,10 @@ label {
       text-align: center;
       padding: 17px 0; }
       .zoonBtRoot ul li i {
-        color: #2738da;
+        color: #b01330;
         font-size: 16px;
         font-weight: bold;
-        border: 1px solid #2738da;
+        border: 1px solid #b01330;
         border-radius: 5px;
         padding: 8px 0;
         width: 120px;

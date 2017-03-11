@@ -60,7 +60,6 @@ $bgColor: #b01330;
     float: left;
     display: inline;
     height: auto;
-    background: #E67D1F;
     .moudle_top{//文字
         position: relative;
         height: auto;
@@ -82,6 +81,7 @@ $bgColor: #b01330;
             li{
                 border-bottom: 1px dashed #ccc;
                 padding: 15px 8px;
+                background: #fff;
                 a{
                     display: block;
                     text-align: center;
@@ -94,6 +94,8 @@ $bgColor: #b01330;
                         margin: 12px auto 8px auto;
                         height: 36px;
                         overflow: hidden;
+                        line-height: 20px;
+                        color: #666;
                     }
                 }
                 .others_goods{
@@ -271,12 +273,13 @@ $bgColor: #b01330;
         padding: 10px 20px 50px;
         background-color: #FFF;
         text-align: center;
+        color: #997239;
         .page_nav{
             display: inline-block;
+            height: 19px;
             div,span{
                 display: inline-block;
                 float: left;
-                color: #997239;;
                 margin:0 2px;
                 line-height: 18px;
                 border: 1px solid #cccccc;
@@ -288,10 +291,38 @@ $bgColor: #b01330;
             span{
                 display: block;
             }
-            .current {//点击选中
-                color: #ffffff;
-                background: $bgColor;
+        }
+        .record{
+            display: inline-block;
+            margin-left: 10px;
+            font-size: 14px;
+            font-family: "Microsoft Yahei";
+            color: #999;
+            text-align: right;
+            .txt {
+                width: 46px;
+                height: 23px;
+                line-height: 23px;
+                text-align: center;
+                border: 1px solid #eee;
             }
+            .btn {
+                width: 43px;
+                height: 25px;
+                line-height: 25px;
+                background-color: #b9a590;
+                color: #fff;
+                text-align: center;
+                text-decoration: none;
+                display: inline-block;
+            }
+        }
+        .current {//点击选中
+            color: #ffffff;
+            background: $bgColor;
+        }
+        .hover{
+            color: $bgColor;
         }
         
     }

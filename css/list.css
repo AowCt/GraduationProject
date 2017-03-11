@@ -103,8 +103,7 @@ label {
   width: 210px;
   float: left;
   display: inline;
-  height: auto;
-  background: #E67D1F; }
+  height: auto; }
   .left_side .moudle_top {
     position: relative;
     height: auto;
@@ -123,7 +122,8 @@ label {
       padding: 0 10px; }
       .left_side .hot_recommend ul li {
         border-bottom: 1px dashed #ccc;
-        padding: 15px 8px; }
+        padding: 15px 8px;
+        background: #fff; }
         .left_side .hot_recommend ul li a {
           display: block;
           text-align: center; }
@@ -134,7 +134,9 @@ label {
             text-align: left;
             margin: 12px auto 8px auto;
             height: 36px;
-            overflow: hidden; }
+            overflow: hidden;
+            line-height: 20px;
+            color: #666; }
         .left_side .hot_recommend ul li .others_goods {
           font-weight: bold; }
           .left_side .hot_recommend ul li .others_goods b {
@@ -271,13 +273,14 @@ label {
   .right_side .pages {
     padding: 10px 20px 50px;
     background-color: #FFF;
-    text-align: center; }
+    text-align: center;
+    color: #997239; }
     .right_side .pages .page_nav {
-      display: inline-block; }
+      display: inline-block;
+      height: 19px; }
       .right_side .pages .page_nav div, .right_side .pages .page_nav span {
         display: inline-block;
         float: left;
-        color: #997239;
         margin: 0 2px;
         line-height: 18px;
         border: 1px solid #cccccc;
@@ -287,9 +290,33 @@ label {
         cursor: pointer; }
       .right_side .pages .page_nav span {
         display: block; }
-      .right_side .pages .page_nav .current {
-        color: #ffffff;
-        background: #b01330; }
+    .right_side .pages .record {
+      display: inline-block;
+      margin-left: 10px;
+      font-size: 14px;
+      font-family: "Microsoft Yahei";
+      color: #999;
+      text-align: right; }
+      .right_side .pages .record .txt {
+        width: 46px;
+        height: 23px;
+        line-height: 23px;
+        text-align: center;
+        border: 1px solid #eee; }
+      .right_side .pages .record .btn {
+        width: 43px;
+        height: 25px;
+        line-height: 25px;
+        background-color: #b9a590;
+        color: #fff;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block; }
+    .right_side .pages .current {
+      color: #ffffff;
+      background: #b01330; }
+    .right_side .pages .hover {
+      color: #b01330; }
   .right_side .list_bottom {
     background-color: #FFF;
     padding: 10px 20px; }
